@@ -1,3 +1,13 @@
-$green: #00ff00;
-$yellow: #00ffff;
-$tile-size: 250px;
+@import "fonts";
+
+
+/*colors*/
+$transparent-white: rgba(255, 255, 255, 0.1);
+$transparent-black: rgba(0, 0, 0, 0.7);
+
+/*sizes*/
+$card-size: 250px;
+
+/*fonts*/
+$font-text-box: "Tahoma", sans-serif;
+$font-text: "OmnesMedium", sans-serif;

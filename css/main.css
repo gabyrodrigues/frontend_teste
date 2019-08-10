@@ -1,36 +1,32 @@
-/*#brasil {
-	li {
-		float: left;
-		box-sizing: border-box;
-		text-align: center;
-		width: (100% / 3);
-		list-style: none;
-	}
+@font-face {
+  font-family: 'Tahoma';
+  src: url(./fonts/tahoma.ttf) format("truetype");
+  font-weight: normal;
+  font-style: normal; }
 
-	img {
-		width: 60%;
-		margin: 20px 20px;
-	}
+@font-face {
+  font-family: 'OmnesMedium';
+  src: url(./fonts/omnesmedium.ttf) format("truetype");
+  font-weight: normal;
+  font-style: normal; }
 
-	ul {
-		@include clearFix;
-	}
-}*/
-/*#brasil li {
-	float: left;
-	width: 23%;
-	margin-right: 2%;
-	list-style: none;
-	img {
-		width: 100%;
-	}
-}*/
+/*colors*/
+/*sizes*/
+/*fonts*/
+/*node-sass -o css scss/main.scss*/
+/*node-sass -o css scss -w*/
 .container {
   padding: 1%; }
   .container:after {
     content: "";
     display: table;
     clear: both; }
+  .container .category-title {
+    font-family: "OmnesMedium", sans-serif;
+    font-size: 1rem;
+    margin-top: 0;
+    margin-bottom: 1%;
+    font-weight: normal; }
 
 .grid {
   list-style: none;
@@ -42,20 +38,62 @@
     overflow: hidden;
     width: 29.41176%;
     height: 250px;
-    margin: 1% 1% 0 0; }
+    max-height: 250px;
+    margin: 1% 1% 0 0;
+    border-radius: 2%; }
     .grid .card figure {
       height: 100%;
       margin: 0;
       position: relative; }
       .grid .card figure img {
         width: 100%;
-        height: 250px; }
-      .grid .card figure figcaption {
+        height: 100%; }
+        @media screen and (max-width: 992px) {
+          .grid .card figure img {
+            width: auto; } }
+      .grid .card figure .img-box {
         position: absolute;
-        top: 70%;
+        top: 0;
         left: 0;
         right: 0;
         bottom: 0;
-        color: #f4f4f3;
-        padding: 5px;
-        text-align: left; }
+        background-image: linear-gradient(transparent, rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.7)); }
+        .grid .card figure .img-box .img-text-left {
+          position: absolute;
+          top: 80%;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          color: white;
+          padding-left: 4%;
+          text-align: left;
+          width: 65%;
+          font-family: "OmnesMedium", sans-serif; }
+          .grid .card figure .img-box .img-text-left .country {
+            font-size: 0.7rem;
+            margin: 0 0 2% 0; }
+          .grid .card figure .img-box .img-text-left .description {
+            font-weight: bold;
+            font-size: 1.2rem;
+            margin: 0; }
+        .grid .card figure .img-box .img-text-right {
+          position: absolute;
+          top: 80%;
+          left: 45%;
+          right: 0;
+          bottom: 0;
+          color: white;
+          padding-left: 1%;
+          text-align: right;
+          width: 50%;
+          font-family: "OmnesMedium", sans-serif; }
+          .grid .card figure .img-box .img-text-right .text-sm {
+            font-size: 0.7rem;
+            margin: 0 0 2% 0; }
+          .grid .card figure .img-box .img-text-right .price {
+            font-weight: bold;
+            font-size: 1.3rem;
+            margin: 0 0 2% 0; }
+    @media screen and (min-width: 577px) and (max-width: 768px) {
+      .grid .card {
+        width: 48.78049%; } }
