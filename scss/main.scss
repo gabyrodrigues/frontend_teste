@@ -1,5 +1,6 @@
 @import "variables";
 @import "mixins";
+@import "fonts";
 
 /*node-sass -o css scss/main.scss*/
 /*node-sass -o css scss -w*/
@@ -155,6 +156,13 @@
 			text-align: center;
 	  }
 
+	  @media screen and (min-width: 577px) {
+	    display: none;
+		  }
+
+	  @media screen and (max-width: 576px){
+	    display: block;
+	  }
 
 	}
 
@@ -275,7 +283,7 @@
 	    /*width: 7% !important;*/
 	    height: $card-size;
 	    max-height: $card-size;
-	    margin: 1% 0.3% 0 0;
+	    margin: 1% 0.35% 0 0;
 	    border-radius: 2%;
 
 	    figure {
@@ -370,6 +378,6 @@
 	  }
 	}
 
-	.slick-list {
+	/*.slick-list {
 		overflow: initial !important;
-	}
+	}*/

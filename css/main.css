@@ -1,3 +1,6 @@
+/*colors*/
+/*sizes*/
+/*fonts*/
 @font-face {
   font-family: 'Tahoma';
   src: url(./fonts/tahoma.ttf) format("truetype");
@@ -10,9 +13,6 @@
   font-weight: normal;
   font-style: normal; }
 
-/*colors*/
-/*sizes*/
-/*fonts*/
 /*node-sass -o css scss/main.scss*/
 /*node-sass -o css scss -w*/
 /*desktop*/
@@ -129,6 +129,12 @@
     margin-bottom: -5%;
     font-weight: normal;
     text-align: center; }
+  @media screen and (min-width: 577px) {
+    .mobile {
+      display: none; } }
+  @media screen and (max-width: 576px) {
+    .mobile {
+      display: block; } }
 
 .carousel {
   padding: 0;
@@ -215,7 +221,7 @@
     /*width: 7% !important;*/
     height: 250px;
     max-height: 250px;
-    margin: 1% 0.3% 0 0;
+    margin: 1% 0.35% 0 0;
     border-radius: 2%; }
     .carousel-br .carousel-card figure {
       height: 100%;
@@ -280,5 +286,6 @@
     .carousel-br {
       display: block; } }
 
-.slick-list {
-  overflow: initial !important; }
+/*.slick-list {
+		overflow: initial !important;
+	}*/

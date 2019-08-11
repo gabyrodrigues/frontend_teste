@@ -23,6 +23,7 @@ $('.carousel-br').slick({
   speed: 500,
   slidesToShow: 1,
   slidesToScroll: 1,
+  initialSlide: 3,
   centerMode: true,
   arrows: false,
   responsive: [
