@@ -6,7 +6,7 @@
 
 @font-face {
   font-family: 'OmnesMedium';
-  src: url(./fonts/omnesmedium.ttf) format("truetype");
+  src: url(./fonts/omnes-medium.ttf) format("truetype");
   font-weight: normal;
   font-style: normal; }
 
@@ -16,15 +16,19 @@
 /*node-sass -o css scss/main.scss*/
 /*node-sass -o css scss -w*/
 .container {
-  padding: 1%; }
+  padding: 1%;
+  padding-left: 10vw; }
   .container:after {
     content: "";
     display: table;
     clear: both; }
+  @media screen and (min-width: 577px) and (max-width: 768px) {
+    .container {
+      padding-left: 1vw; } }
   .container .category-title {
     font-family: "OmnesMedium", sans-serif;
     font-size: 1rem;
-    margin-top: 0;
+    margin-top: 1%;
     margin-bottom: 1%;
     font-weight: normal; }
 
@@ -46,7 +50,7 @@
       margin: 0;
       position: relative; }
       .grid .card figure img {
-        width: 100%;
+        width: 110%;
         height: 100%; }
         @media screen and (max-width: 992px) {
           .grid .card figure img {
@@ -60,7 +64,7 @@
         background-image: linear-gradient(transparent, rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.7)); }
         .grid .card figure .img-box .img-text-left {
           position: absolute;
-          top: 80%;
+          top: 76%;
           left: 0;
           right: 0;
           bottom: 0;
@@ -69,16 +73,20 @@
           text-align: left;
           width: 65%;
           font-family: "OmnesMedium", sans-serif; }
+          @media screen and (min-width: 909px) and (max-width: 865px) {
+            .grid .card figure .img-box .img-text-left {
+              top: 68%;
+              width: 58%; } }
           .grid .card figure .img-box .img-text-left .country {
             font-size: 0.7rem;
             margin: 0 0 2% 0; }
           .grid .card figure .img-box .img-text-left .description {
-            font-weight: bold;
-            font-size: 1.2rem;
-            margin: 0; }
+            font-size: 1.1rem;
+            margin: 0;
+            margin-top: -1%; }
         .grid .card figure .img-box .img-text-right {
           position: absolute;
-          top: 80%;
+          top: 76%;
           left: 45%;
           right: 0;
           bottom: 0;
@@ -87,13 +95,18 @@
           text-align: right;
           width: 50%;
           font-family: "OmnesMedium", sans-serif; }
+          @media screen and (min-width: 909px) and (max-width: 865px) {
+            .grid .card figure .img-box .img-text-right {
+              top: 68%; } }
           .grid .card figure .img-box .img-text-right .text-sm {
             font-size: 0.7rem;
             margin: 0 0 2% 0; }
           .grid .card figure .img-box .img-text-right .price {
-            font-weight: bold;
-            font-size: 1.3rem;
+            font-size: 1.2rem;
             margin: 0 0 2% 0; }
     @media screen and (min-width: 577px) and (max-width: 768px) {
       .grid .card {
         width: 48.78049%; } }
+    @media screen and (max-width: 576px) {
+      .grid .card {
+        display: none; } }
