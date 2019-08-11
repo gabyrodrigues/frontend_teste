@@ -15,6 +15,7 @@
 /*fonts*/
 /*node-sass -o css scss/main.scss*/
 /*node-sass -o css scss -w*/
+/*desktop*/
 .container {
   padding: 1%;
   padding-left: 10vw; }
@@ -31,6 +32,12 @@
     margin-top: 1%;
     margin-bottom: 1%;
     font-weight: normal; }
+  @media screen and (min-width: 577px) {
+    .container {
+      display: block; } }
+  @media screen and (max-width: 576px) {
+    .container {
+      display: none; } }
 
 .grid {
   list-style: none;
@@ -110,3 +117,168 @@
     @media screen and (max-width: 576px) {
       .grid .card {
         display: none; } }
+
+/*mobile*/
+.mobile {
+  padding: 1%;
+  margin-top: 5%; }
+  .mobile .category-title {
+    font-family: "OmnesMedium", sans-serif;
+    font-size: 1rem;
+    margin-top: 5%;
+    margin-bottom: -5%;
+    font-weight: normal;
+    text-align: center; }
+
+.carousel {
+  padding: 0;
+  width: 100%;
+  margin: auto;
+  margin-top: 7% !important; }
+  .carousel .carousel-card {
+    float: left;
+    overflow: hidden;
+    height: 250px;
+    max-height: 250px;
+    margin: 1% 0.3% 0 0;
+    border-radius: 2%; }
+    .carousel .carousel-card figure {
+      height: 100%;
+      margin: 0;
+      position: relative; }
+      .carousel .carousel-card figure img {
+        width: 100%;
+        height: 100%; }
+      .carousel .carousel-card figure .img-box {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: linear-gradient(transparent, rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.7)); }
+        .carousel .carousel-card figure .img-box .img-text-left {
+          position: absolute;
+          top: 76%;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          color: white;
+          padding-left: 4%;
+          text-align: left;
+          width: 65%;
+          font-family: "OmnesMedium", sans-serif; }
+          @media screen and (min-width: 909px) and (max-width: 865px) {
+            .carousel .carousel-card figure .img-box .img-text-left {
+              top: 68%;
+              width: 58%; } }
+          .carousel .carousel-card figure .img-box .img-text-left .country {
+            font-size: 0.7rem;
+            margin: 0 0 2% 0; }
+          .carousel .carousel-card figure .img-box .img-text-left .description {
+            font-size: 1.1rem;
+            margin: 0;
+            margin-top: -1%; }
+        .carousel .carousel-card figure .img-box .img-text-right {
+          position: absolute;
+          top: 76%;
+          left: 45%;
+          right: 0;
+          bottom: 0;
+          color: white;
+          padding-left: 1%;
+          text-align: right;
+          width: 50%;
+          font-family: "OmnesMedium", sans-serif; }
+          @media screen and (min-width: 909px) and (max-width: 865px) {
+            .carousel .carousel-card figure .img-box .img-text-right {
+              top: 68%; } }
+          .carousel .carousel-card figure .img-box .img-text-right .text-sm {
+            font-size: 0.7rem;
+            margin: 0 0 2% 0; }
+          .carousel .carousel-card figure .img-box .img-text-right .price {
+            font-size: 1.2rem;
+            margin: 0 0 2% 0; }
+  @media screen and (min-width: 577px) {
+    .carousel {
+      display: none; } }
+  @media screen and (max-width: 576px) {
+    .carousel {
+      display: block; } }
+
+.carousel-br {
+  padding: 0;
+  width: 100%;
+  margin: auto; }
+  .carousel-br .carousel-card {
+    float: left;
+    overflow: hidden;
+    /*width: 7% !important;*/
+    height: 250px;
+    max-height: 250px;
+    margin: 1% 0.3% 0 0;
+    border-radius: 2%; }
+    .carousel-br .carousel-card figure {
+      height: 100%;
+      margin: 0;
+      position: relative; }
+      .carousel-br .carousel-card figure img {
+        width: 100%;
+        height: 100%; }
+      .carousel-br .carousel-card figure .img-box {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: linear-gradient(transparent, rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.7)); }
+        .carousel-br .carousel-card figure .img-box .img-text-left {
+          position: absolute;
+          top: 76%;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          color: white;
+          padding-left: 4%;
+          text-align: left;
+          width: 65%;
+          font-family: "OmnesMedium", sans-serif; }
+          @media screen and (min-width: 909px) and (max-width: 865px) {
+            .carousel-br .carousel-card figure .img-box .img-text-left {
+              top: 68%;
+              width: 58%; } }
+          .carousel-br .carousel-card figure .img-box .img-text-left .country {
+            font-size: 0.7rem;
+            margin: 0 0 2% 0; }
+          .carousel-br .carousel-card figure .img-box .img-text-left .description {
+            font-size: 1.1rem;
+            margin: 0;
+            margin-top: -1%; }
+        .carousel-br .carousel-card figure .img-box .img-text-right {
+          position: absolute;
+          top: 76%;
+          left: 45%;
+          right: 0;
+          bottom: 0;
+          color: white;
+          padding-left: 1%;
+          text-align: right;
+          width: 50%;
+          font-family: "OmnesMedium", sans-serif; }
+          @media screen and (min-width: 909px) and (max-width: 865px) {
+            .carousel-br .carousel-card figure .img-box .img-text-right {
+              top: 68%; } }
+          .carousel-br .carousel-card figure .img-box .img-text-right .text-sm {
+            font-size: 0.7rem;
+            margin: 0 0 2% 0; }
+          .carousel-br .carousel-card figure .img-box .img-text-right .price {
+            font-size: 1.2rem;
+            margin: 0 0 2% 0; }
+  @media screen and (min-width: 577px) {
+    .carousel-br {
+      display: none; } }
+  @media screen and (max-width: 576px) {
+    .carousel-br {
+      display: block; } }
+
+.slick-list {
+  overflow: initial !important; }

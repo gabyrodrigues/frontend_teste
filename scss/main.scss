@@ -4,131 +4,372 @@
 /*node-sass -o css scss/main.scss*/
 /*node-sass -o css scss -w*/
 
-.container{
-  padding: 1%;
-  padding-left: 10vw;
-  @include clearFix;
-
-  @media screen and (min-width: 577px) and (max-width: 768px){
-	  padding-left: 1vw;
-	}
-
-  .category-title {
-  	font-family: $font-text;
-  	font-size: 1rem;
-		margin-top: 1%;
-		margin-bottom: 1%;
-		font-weight: normal;
-  }
-}
-  
-.grid {  
-  list-style: none;
-  padding: 0;
-  width: 100%;
-  margin: auto;
-
-  .card {
-    float: left;
-    overflow: hidden;
-    width: (100% / 3.4);
-    height: $card-size;
-    max-height: $card-size;
-    margin: 1% 1% 0 0;
-    border-radius: 2%;
-
-    figure {
-      height: 100%;
-      margin: 0;
-      position: relative;
-
-      img {	
-        width: 110%;
-        height: 100%;
-
-        @media screen and (max-width: 992px){
-			    width: auto;
-			  }
-      }
-
-      .img-box {
-      	position: absolute;
-				top: 0;
-				left: 0;
-				right: 0;
-				bottom: 0;
-				background-image: linear-gradient(transparent, $transparent-white, $transparent-black);
-
-	      .img-text-left {
-	        position: absolute;
-					top: 76%;
-					left: 0;
-					right: 0;
-					bottom: 0;
-					color: white;
-					padding-left: 4%;
-					text-align: left;
-					width: 65%;
-					font-family: $font-text;
-
-					@media screen and (min-width: 909px) and (max-width: 865px){
-				    top: 68%;
-				    width: 58%;
-				  }
-
-
-					.country {
-						font-size: 0.7rem;
-						margin: 0 0 2% 0;
-					} 
-
-					.description {
-						font-size: 1.1rem;
-						margin: 0;
-						margin-top: -1%;
-					}
-
-	      }
-
-	      .img-text-right {
-	        position: absolute;
-	        top: 76%;
-	        left: 45%;
-	        right: 0;
-	        bottom: 0;
-	        color: white;
-	        padding-left: 1%;
-	        text-align: right;
-	        width: 50%;
-	        font-family: $font-text;
-
-	        @media screen and (min-width: 909px) and (max-width: 865px){
-				    top: 68%;
-				  }
-
-	        .text-sm {
-						font-size: 0.7rem;
-						margin: 0 0 2% 0;
-					} 
-
-					.price {
-						font-size: 1.2rem;
-						margin: 0 0 2% 0;
-					} 
-
-	      }
-	    }
-
-    }    
+/*desktop*/
+	.container{
+	  padding: 1%;
+	  padding-left: 10vw;
+	  @include clearFix;
 
 	  @media screen and (min-width: 577px) and (max-width: 768px){
-	    width: (100% / 2.05);
+		  padding-left: 1vw;
+		}
+
+	  .category-title {
+	  	font-family: $font-text;
+	  	font-size: 1rem;
+			margin-top: 1%;
+			margin-bottom: 1%;
+			font-weight: normal;
+	  }
+
+	  @media screen and (min-width: 577px) {
+	    display: block;
 	  }
 
 	  @media screen and (max-width: 576px){
 	    display: none;
 	  }
+	}
+	  
+	.grid {  
+	  list-style: none;
+	  padding: 0;
+	  width: 100%;
+	  margin: auto;
 
-  }
-}
+	  .card {
+	    float: left;
+	    overflow: hidden;
+	    width: (100% / 3.4);
+	    height: $card-size;
+	    max-height: $card-size;
+	    margin: 1% 1% 0 0;
+	    border-radius: 2%;
+
+	    figure {
+	      height: 100%;
+	      margin: 0;
+	      position: relative;
+
+	      img {	
+	        width: 110%;
+	        height: 100%;
+
+	        @media screen and (max-width: 992px){
+				    width: auto;
+				  }
+	      }
+
+	      .img-box {
+	      	position: absolute;
+					top: 0;
+					left: 0;
+					right: 0;
+					bottom: 0;
+					background-image: linear-gradient(transparent, $transparent-white, $transparent-black);
+
+		      .img-text-left {
+		        position: absolute;
+						top: 76%;
+						left: 0;
+						right: 0;
+						bottom: 0;
+						color: white;
+						padding-left: 4%;
+						text-align: left;
+						width: 65%;
+						font-family: $font-text;
+
+						@media screen and (min-width: 909px) and (max-width: 865px){
+					    top: 68%;
+					    width: 58%;
+					  }
+
+
+						.country {
+							font-size: 0.7rem;
+							margin: 0 0 2% 0;
+						} 
+
+						.description {
+							font-size: 1.1rem;
+							margin: 0;
+							margin-top: -1%;
+						}
+
+		      }
+
+		      .img-text-right {
+		        position: absolute;
+		        top: 76%;
+		        left: 45%;
+		        right: 0;
+		        bottom: 0;
+		        color: white;
+		        padding-left: 1%;
+		        text-align: right;
+		        width: 50%;
+		        font-family: $font-text;
+
+		        @media screen and (min-width: 909px) and (max-width: 865px){
+					    top: 68%;
+					  }
+
+		        .text-sm {
+							font-size: 0.7rem;
+							margin: 0 0 2% 0;
+						} 
+
+						.price {
+							font-size: 1.2rem;
+							margin: 0 0 2% 0;
+						} 
+
+		      }
+		    }
+
+	    }    
+
+		  @media screen and (min-width: 577px) and (max-width: 768px){
+		    width: (100% / 2.05);
+		  }
+
+		  @media screen and (max-width: 576px){
+		    display: none;
+		  }
+
+	  }
+	}
+
+/*mobile*/
+	.mobile {
+	  padding: 1%;
+	  margin-top: 5%;
+
+	  .category-title {
+	  	font-family: $font-text;
+	  	font-size: 1rem;
+			margin-top: 5%;
+			margin-bottom: -5%;
+			font-weight: normal;
+			text-align: center;
+	  }
+
+
+	}
+
+  .carousel {  
+	  padding: 0;
+	  width: 100%;
+	  margin: auto;
+	  margin-top: 7% !important;
+
+	  .carousel-card {
+	    float: left;
+	    overflow: hidden;
+	    height: $card-size;
+	    max-height: $card-size;
+	    margin: 1% 0.3% 0 0;
+	    border-radius: 2%;
+
+	    figure {
+	      height: 100%;
+	      margin: 0;
+	      position: relative;
+
+	      img {	
+	        width: 100%;
+	        height: 100%;
+	      }
+
+	      .img-box {
+	      	position: absolute;
+					top: 0;
+					left: 0;
+					right: 0;
+					bottom: 0;
+					background-image: linear-gradient(transparent, $transparent-white, $transparent-black);
+
+		      .img-text-left {
+		        position: absolute;
+						top: 76%;
+						left: 0;
+						right: 0;
+						bottom: 0;
+						color: white;
+						padding-left: 4%;
+						text-align: left;
+						width: 65%;
+						font-family: $font-text;
+
+						@media screen and (min-width: 909px) and (max-width: 865px){
+					    top: 68%;
+					    width: 58%;
+					  }
+
+
+						.country {
+							font-size: 0.7rem;
+							margin: 0 0 2% 0;
+						} 
+
+						.description {
+							font-size: 1.1rem;
+							margin: 0;
+							margin-top: -1%;
+						}
+
+		      }
+
+		      .img-text-right {
+		        position: absolute;
+		        top: 76%;
+		        left: 45%;
+		        right: 0;
+		        bottom: 0;
+		        color: white;
+		        padding-left: 1%;
+		        text-align: right;
+		        width: 50%;
+		        font-family: $font-text;
+
+		        @media screen and (min-width: 909px) and (max-width: 865px){
+					    top: 68%;
+					  }
+
+		        .text-sm {
+							font-size: 0.7rem;
+							margin: 0 0 2% 0;
+						} 
+
+						.price {
+							font-size: 1.2rem;
+							margin: 0 0 2% 0;
+						} 
+
+		      }
+		    }
+
+	    }    
+
+
+	  }
+
+	  @media screen and (min-width: 577px) {
+	    display: none;
+		  }
+
+	  @media screen and (max-width: 576px){
+	    display: block;
+	  }
+	}
 	
+	.carousel-br {  
+	  padding: 0;
+	  width: 100%;
+	  margin: auto;
+
+	  .carousel-card {
+	    float: left;
+	    overflow: hidden;
+	    /*width: 7% !important;*/
+	    height: $card-size;
+	    max-height: $card-size;
+	    margin: 1% 0.3% 0 0;
+	    border-radius: 2%;
+
+	    figure {
+	      height: 100%;
+	      margin: 0;
+	      position: relative;
+
+	      img {	
+	        width: 100%;
+	        height: 100%;
+	      }
+
+	      .img-box {
+	      	position: absolute;
+					top: 0;
+					left: 0;
+					right: 0;
+					bottom: 0;
+					background-image: linear-gradient(transparent, $transparent-white, $transparent-black);
+
+		      .img-text-left {
+		        position: absolute;
+						top: 76%;
+						left: 0;
+						right: 0;
+						bottom: 0;
+						color: white;
+						padding-left: 4%;
+						text-align: left;
+						width: 65%;
+						font-family: $font-text;
+
+						@media screen and (min-width: 909px) and (max-width: 865px){
+					    top: 68%;
+					    width: 58%;
+					  }
+
+
+						.country {
+							font-size: 0.7rem;
+							margin: 0 0 2% 0;
+						} 
+
+						.description {
+							font-size: 1.1rem;
+							margin: 0;
+							margin-top: -1%;
+						}
+
+		      }
+
+		      .img-text-right {
+		        position: absolute;
+		        top: 76%;
+		        left: 45%;
+		        right: 0;
+		        bottom: 0;
+		        color: white;
+		        padding-left: 1%;
+		        text-align: right;
+		        width: 50%;
+		        font-family: $font-text;
+
+		        @media screen and (min-width: 909px) and (max-width: 865px){
+					    top: 68%;
+					  }
+
+		        .text-sm {
+							font-size: 0.7rem;
+							margin: 0 0 2% 0;
+						} 
+
+						.price {
+							font-size: 1.2rem;
+							margin: 0 0 2% 0;
+						} 
+
+		      }
+		    }
+
+	    }    
+
+
+	  }
+
+	  @media screen and (min-width: 577px) {
+	    display: none;
+		  }
+
+	  @media screen and (max-width: 576px){
+	    display: block;
+	  }
+	}
+
+	.slick-list {
+		overflow: initial !important;
+	}
