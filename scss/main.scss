@@ -5,6 +5,18 @@
 /*node-sass -o css scss/main.scss*/
 /*node-sass -o css scss -w*/
 
+html, body {
+	min-width: 100%;
+}
+
+body {
+	overflow-x: hidden;
+}
+
+.m-l-n-3p {
+	margin-left: -3%;
+}
+
 /*desktop*/
 	.container{
 	  padding: 1%;
@@ -56,7 +68,11 @@
 	        width: 110%;
 	        height: 100%;
 
-	        @media screen and (max-width: 992px){
+	        @media screen and (min-width: 577px) and (max-width: 768px){
+				    width: 100%;
+				  }
+	        
+	        @media screen and (min-width: 769px) and (max-width: 992px){
 				    width: auto;
 				  }
 	      }
@@ -78,24 +94,32 @@
 						color: white;
 						padding-left: 4%;
 						text-align: left;
-						width: 65%;
+						width: 60%;
 						font-family: $font-text;
 
-						@media screen and (min-width: 909px) and (max-width: 865px){
+						@media screen and (min-width: 769px) and (max-width: 865px){
+					    width: 56%;
+					  }
+
+						@media screen and (min-width: 865px) and (max-width: 909px){
 					    top: 68%;
 					    width: 58%;
 					  }
 
-
 						.country {
 							font-size: 0.7rem;
 							margin: 0 0 2% 0;
+
 						} 
 
 						.description {
 							font-size: 1.1rem;
 							margin: 0;
 							margin-top: -1%;
+							
+							@media screen and (min-width: 769px) and (max-width: 865px){
+					    	font-size: 0.9rem;
+					  	}
 						}
 
 		      }
@@ -112,7 +136,7 @@
 		        width: 50%;
 		        font-family: $font-text;
 
-		        @media screen and (min-width: 909px) and (max-width: 865px){
+		        @media screen and (min-width: 865px) and (max-width: 909px){
 					    top: 68%;
 					  }
 
@@ -124,6 +148,10 @@
 						.price {
 							font-size: 1.2rem;
 							margin: 0 0 2% 0;
+
+							@media screen and (min-width: 768px) and (max-width: 865px){
+					    	font-size: 1rem;
+					  	}
 						} 
 
 		      }

@@ -15,6 +15,15 @@
 
 /*node-sass -o css scss/main.scss*/
 /*node-sass -o css scss -w*/
+html, body {
+  min-width: 100%; }
+
+body {
+  overflow-x: hidden; }
+
+.m-l-n-3p {
+  margin-left: -3%; }
+
 /*desktop*/
 .container {
   padding: 1%;
@@ -59,7 +68,10 @@
       .grid .card figure img {
         width: 110%;
         height: 100%; }
-        @media screen and (max-width: 992px) {
+        @media screen and (min-width: 577px) and (max-width: 768px) {
+          .grid .card figure img {
+            width: 100%; } }
+        @media screen and (min-width: 769px) and (max-width: 992px) {
           .grid .card figure img {
             width: auto; } }
       .grid .card figure .img-box {
@@ -78,9 +90,12 @@
           color: white;
           padding-left: 4%;
           text-align: left;
-          width: 65%;
+          width: 60%;
           font-family: "OmnesMedium", sans-serif; }
-          @media screen and (min-width: 909px) and (max-width: 865px) {
+          @media screen and (min-width: 769px) and (max-width: 865px) {
+            .grid .card figure .img-box .img-text-left {
+              width: 56%; } }
+          @media screen and (min-width: 865px) and (max-width: 909px) {
             .grid .card figure .img-box .img-text-left {
               top: 68%;
               width: 58%; } }
@@ -91,6 +106,9 @@
             font-size: 1.1rem;
             margin: 0;
             margin-top: -1%; }
+            @media screen and (min-width: 769px) and (max-width: 865px) {
+              .grid .card figure .img-box .img-text-left .description {
+                font-size: 0.9rem; } }
         .grid .card figure .img-box .img-text-right {
           position: absolute;
           top: 76%;
@@ -102,7 +120,7 @@
           text-align: right;
           width: 50%;
           font-family: "OmnesMedium", sans-serif; }
-          @media screen and (min-width: 909px) and (max-width: 865px) {
+          @media screen and (min-width: 865px) and (max-width: 909px) {
             .grid .card figure .img-box .img-text-right {
               top: 68%; } }
           .grid .card figure .img-box .img-text-right .text-sm {
@@ -111,6 +129,9 @@
           .grid .card figure .img-box .img-text-right .price {
             font-size: 1.2rem;
             margin: 0 0 2% 0; }
+            @media screen and (min-width: 768px) and (max-width: 865px) {
+              .grid .card figure .img-box .img-text-right .price {
+                font-size: 1rem; } }
     @media screen and (min-width: 577px) and (max-width: 768px) {
       .grid .card {
         width: 48.78049%; } }
